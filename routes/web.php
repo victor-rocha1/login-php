@@ -1,7 +1,4 @@
 <?php
-$request = $_SERVER['REQUEST_URI'];
-
-$request = str_replace('/projeto-login-php/public', '', $request);
 
 switch ($request) {
     case '/':
@@ -14,6 +11,10 @@ switch ($request) {
 
     case '/auth':
         require_once __DIR__ . '/../app/Controllers/AuthController.php';
+        break;
+
+    case '/home':
+        require_once __DIR__ . '/../app/Views/home.php';
         break;
 
     default:
