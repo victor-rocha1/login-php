@@ -1,4 +1,5 @@
 <?php
+$request = $_SERVER['REQUEST_URI'];
 
 switch ($request) {
     case '/':
@@ -19,6 +20,5 @@ switch ($request) {
 
     default:
         http_response_code(404);
-        echo "Página não encontrada.";
         break;
 }
