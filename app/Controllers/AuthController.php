@@ -14,8 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: /login-php/app/Views/home.php');
             exit;
         } else {
-            echo "<script>alert('Usuário ou senha inválidos!');</script>";
-        }
+            echo "<script>
+                alert('Usuário ou senha inválidos!');
+                window.location.href = '/login-php/app/Views/login.php';
+            </script>";
+            exit;
+        }        
     } elseif ($acao === 'Cadastrar') {
         $query = "INSERT INTO users (name, password) VALUES ('$usuario', '$senha')";
         if ($mysql->query($query)) {
