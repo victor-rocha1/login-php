@@ -1,16 +1,20 @@
+<?php
+require_once __DIR__ . '/../../routes/web.php';
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>Login</title>
 </head>
 
 <body>
     <div class="formulario">
         <h1>Login</h1>
-        <form method="post" action="../routes/web.php">
+        <form method="post" action="../Controllers/AuthController.php">
             <label for="usuario">Usuário:</label>
             <input type="text" name="usuario" id="usuario" required>
 

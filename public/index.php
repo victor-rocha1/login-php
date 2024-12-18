@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . '/../routes/web.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,7 +14,7 @@
 
 <body>
     <h1>Bem vindo a empresa X</h1>
-    <a href="../app/Views/login.html">Fazer Login</a>
+    <a href="../app/Views/login.php">Fazer Login</a>
 </body>
 
 </html>

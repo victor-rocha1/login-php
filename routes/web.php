@@ -1,14 +1,15 @@
 <?php
 $request = $_SERVER['REQUEST_URI'];
 
+$request = str_replace('/projeto-login-php/public', '', $request);
+
 switch ($request) {
     case '/':
-    case '/login':
         require_once __DIR__ . '/../app/Views/login.php';
         break;
 
-    case '/home':
-        require_once __DIR__ . '/../app/Views/home.php';
+    case '/login':
+        require_once __DIR__ . '/../app/Views/login.php';
         break;
 
     case '/auth':
@@ -20,4 +21,3 @@ switch ($request) {
         echo "Página não encontrada.";
         break;
 }
-?>

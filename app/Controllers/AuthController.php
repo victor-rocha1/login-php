@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Helpers/conexao.php';
+require_once __DIR__ . '../../Models/conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST['usuario'];
@@ -11,7 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = $mysql->query($query);
 
         if ($result->num_rows > 0) {
-            header('Location: /home');
+            header('Location: /login-php/app/Views/home.php');
+            exit;
         } else {
             echo "<script>alert('Usuário ou senha inválidos!');</script>";
         }
